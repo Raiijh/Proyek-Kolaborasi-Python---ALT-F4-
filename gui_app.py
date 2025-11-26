@@ -144,7 +144,10 @@ class TicTacToeGUI:
             self.canvas_line = None
 
     def _setup_gui(self):
-        """Membuat semua elemen GUI (Tampilan)."""
+        """
+        Membangun dan mengatur semua elemen visual Tkinter: 
+        header, label skor, frame papan, tombol, dan tombol reset.
+        """
         self.root.title("Tic-Tac-Toe Game")
         self.root.configure(bg=BG_COLOR) 
 
@@ -167,3 +170,28 @@ class TicTacToeGUI:
         
         self.frame_papan.grid_columnconfigure((0, 1, 2), weight=1)
         self.frame_papan.grid_rowconfigure((0, 1, 2), weight=1)
+
+        for i in range(9):
+            baris = i // 3
+            kolom = i % 3
+            tombol = tk.Button(self.frame_papan, text="", font=('Arial', 36, 'bold'), width=BUTTON_WIDTH_CHARS, height=BUTTON_HEIGHT_LINES, bd=0, bg=BUTTON_COLOR, fg="lightgray", activebackground=BUTTON_COLOR, activeforeground="lightgray", relief=tk.FLAT, command=partial(self._klik_tombol, i))
+            tombol.grid(row=baris, column=kolom, padx=PADDING, pady=PADDING, sticky="nsew")
+            self.tombol_list.append(tombol)
+
+        for tombol in self.tombol_list:
+            tombol.lift()
+
+        self.label_status = tk.Label(self.root, font=('Arial', 16, 'bold'), fg=TEXT_COLOR, bg=BG_COLOR)
+        self.label_status.pack(pady=20)
+        self._update_status_display() 
+
+        tombol_reset = tk.Button(self.root, text="Mulai Ulang", font=('Arial', 14, 'bold'), bg=TITLE_BAR_COLOR, fg=TEXT_COLOR, activebackground=TITLE_BAR_COLOR, activeforeground=TEXT_COLOR, padx=15, pady=8, bd=0, relief=tk.FLAT, command=self._mulai_ulang)
+        tombol_reset.pack(pady=10)
+
+if __name__ == "__main__":
+    """
+    Blok eksekusi utama: Menjalankan aplikasi GUI dan membuat instance root Tkinter.
+    """
+    root = tk.Tk()
+    app = TicTacToeGUI(root)
+    root.mainloop()
