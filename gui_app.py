@@ -63,3 +63,40 @@ class TicTacToeGUI:
         x = tombol.winfo_x() + tombol.winfo_width() / 2
         y = tombol.winfo_y() + tombol.winfo_height() / 2
         return x, y
+
+    def _gambar_garis_kemenangan(self, combo):
+        """Menggambar garis kemenangan di atas Canvas."""
+        if self.canvas_line:
+            self.canvas_overlay.delete(self.canvas_line)
+
+        x1, y1 = self._hitung_pusat_tombol(combo[0])
+        x2, y2 = self._hitung_pusat_tombol(combo[2])
+        
+        self.canvas_line = self.canvas_overlay.create_line(x1, y1, x2, y2, 
+                                                fill=WIN_LINE_COLOR, width=8, tags="win_line")
+        self.canvas_overlay.lift(self.canvas_line)
+
+    def _klik_tombol(self, nomor_kotak):
+        """Menangani event klik tombol. Berinteraksi dengan Backend."""
+        
+        # Panggil Backend untuk memproses gerakan
+        pemain_symbol, hasil, combo = self.backend.lakukan_gerakan(nomor_kotak)
+        
+        if pemain_symbol:
+            tombol = self.tombol_list[nomor_kotak] 
+            tombol.config(text=pemain_symbol, state=tk.DISABLED, 
+                          fg=X_COLOR if pemain_symbol == 'X' else O_COLOR,
+                          bg=BUTTON_COLOR, 
+                          relief=tk.FLAT)
+
+            if hasil == "Seri":
+                messagebox.showinfo("Game Selesai", "Permainan Berakhir SERI!")
+            
+            elif hasil and hasil != "Seri":
+                self._update_score_display()
+                self._gambar_garis_kemenangan(combo) 
+                pemenang_nama = self.backend.player_names[hasil]
+                messagebox.showinfo("Game Selesai", f"🎉 Selamat! {pemenang_nama} ({hasil}) MENANG!")
+            
+            if self.backend.game_aktif:
+                 self._update_status_display()
