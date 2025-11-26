@@ -1,7 +1,7 @@
 import tkinter as tk
 from functools import partial
-from tictactoe_game import TicTacToeBackend
 from tkinter import messagebox, simpledialog
+from tictactoe_game import TicTacToeBackend
 
 # Warna Custom
 BG_COLOR = "#2a3d66" 
@@ -157,7 +157,7 @@ class TicTacToeGUI:
         header_frame.pack_propagate(False)
 
         tk.Label(header_frame, text="TIC-TAC-TOE GAME", font=('Arial', 24, 'bold'), fg=TEXT_COLOR, bg=TITLE_BAR_COLOR).pack(pady=(10, 0))
-        tk.Label(header_frame, text="LOREM IPSUM DOLOR SIT AMET CONSECTETUR", font=('Arial', 10), fg=TEXT_COLOR, bg=TITLE_BAR_COLOR).pack()
+        tk.Label(header_frame, text="Kelompok ALT-F4", font=('Arial', 10), fg=TEXT_COLOR, bg=TITLE_BAR_COLOR).pack()
         
         self.label_score = tk.Label(self.root, font=('Arial', 14), fg=TEXT_COLOR, bg=BG_COLOR)
         self.label_score.pack(pady=(0, 10))
