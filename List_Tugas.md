@@ -1,14 +1,10 @@
 # Rainer (Saya)
-- Mengontrol kegiatan coding
-- Memperbaiki kesalahan
-- Mengelola code
+- Untuk widget GUI nanti saya yang bikin
 
 # Denis
-- Buat branch baru
-- Buat coding untuk tic tac toe nya
-- Dp nama file kse nama tictactoe_game.py
+- Untuk program utama tolong secepatnya diselesaikan
+- tambah docstring yang lebih jelas kalau sudah
  
 # Timothy
-- Buat branch baru
-- Buat coding design GUI
-- kse nama gui_app.py
+- Tolong buat garisnya ketika ada yang menang
+- Dan tolong buat interactionnya (callback)
