@@ -142,3 +142,28 @@ class TicTacToeGUI:
         if self.canvas_line:
             self.canvas_overlay.delete(self.canvas_line)
             self.canvas_line = None
+
+    def _setup_gui(self):
+        """Membuat semua elemen GUI (Tampilan)."""
+        self.root.title("Tic-Tac-Toe Game")
+        self.root.configure(bg=BG_COLOR) 
+
+        # Header Frame
+        header_frame = tk.Frame(self.root, bg=TITLE_BAR_COLOR, height=80)
+        header_frame.pack(fill=tk.X, pady=(0, 20)) 
+        header_frame.pack_propagate(False)
+
+        tk.Label(header_frame, text="TIC-TAC-TOE GAME", font=('Arial', 24, 'bold'), fg=TEXT_COLOR, bg=TITLE_BAR_COLOR).pack(pady=(10, 0))
+        tk.Label(header_frame, text="LOREM IPSUM DOLOR SIT AMET CONSECTETUR", font=('Arial', 10), fg=TEXT_COLOR, bg=TITLE_BAR_COLOR).pack()
+        
+        self.label_score = tk.Label(self.root, font=('Arial', 14), fg=TEXT_COLOR, bg=BG_COLOR)
+        self.label_score.pack(pady=(0, 10))
+
+        self.frame_papan = tk.Frame(self.root, bg=BG_COLOR) 
+        self.frame_papan.pack(pady=10, padx=20) 
+
+        self.canvas_overlay = tk.Canvas(self.frame_papan, bg=BG_COLOR, highlightthickness=0, borderwidth=0)
+        self.canvas_overlay.place(relx=0, rely=0, relwidth=1, relheight=1)
+        
+        self.frame_papan.grid_columnconfigure((0, 1, 2), weight=1)
+        self.frame_papan.grid_rowconfigure((0, 1, 2), weight=1)
