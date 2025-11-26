@@ -47,4 +47,18 @@ class TicTacToeGUI:
         scores = status['scores']
         score_text = f"{names['X']} (X): {scores['X']} | {names['O']} (O): {scores['O']}"
         self.label_score.config(text=score_text)
-        
+
+    def _update_status_display(self):
+        """Memperbarui teks giliran pemain."""
+        status = self.backend.get_status()
+        nama_saat_ini = status['nama_saat_ini']
+        player_saat_ini = status['player_saat_ini']
+        self.label_status.config(text=f"Giliran: {nama_saat_ini} ({player_saat_ini})", fg=TEXT_COLOR)
+    
+    def _hitung_pusat_tombol(self, nomor_kotak):
+        """Menghitung koordinat pusat tombol yang tepat untuk Canvas."""
+        self.root.update_idletasks() 
+        tombol = self.tombol_list[nomor_kotak]
+        x = tombol.winfo_x() + tombol.winfo_width() / 2
+        y = tombol.winfo_y() + tombol.winfo_height() / 2
+        return x, y
