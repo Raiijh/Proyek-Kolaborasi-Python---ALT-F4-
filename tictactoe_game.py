@@ -27,3 +27,21 @@ class TicTacToeBackend:
             return "Seri", None
             
         return None, None
+    
+    def lakukan_gerakan(self, nomor_kotak):
+        """Melakukan gerakan, memperbarui skor jika menang, dan mengganti pemain."""
+        if not self.game_aktif or self.papan[nomor_kotak] != "":
+            return None, None, None
+
+        pemain = self.pemain_saat_ini
+        self.papan[nomor_kotak] = pemain
+        
+        hasil, combo = self.cek_menang()
+
+        if hasil and hasil != "Seri":
+            self.scores[hasil] += 1
+            
+        if self.game_aktif:
+            self.pemain_saat_ini = 'O' if pemain == 'X' else 'X'
+            
+        return pemain, hasil, combo
