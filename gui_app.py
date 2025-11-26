@@ -1,6 +1,7 @@
 import tkinter as tk
 from functools import partial
 from tictactoe_game import TicTacToeBackend
+from tkinter import messagebox, simpledialog
 
 # --- Warna Custom ---
 BG_COLOR = "#2a3d66" 
