@@ -45,3 +45,18 @@ class TicTacToeBackend:
             self.pemain_saat_ini = 'O' if pemain == 'X' else 'X'
             
         return pemain, hasil, combo
+    
+    def reset_game(self):
+        """Mempersiapkan papan untuk ronde baru."""
+        self.papan = [""] * 9
+        self.game_aktif = True
+        self.pemain_saat_ini = 'X' 
+        
+    def get_status(self):
+        """Mengembalikan data status game."""
+        return {
+            'player_saat_ini': self.pemain_saat_ini,
+            'nama_saat_ini': self.player_names[self.pemain_saat_ini],
+            'scores': self.scores,
+            'names': self.player_names
+        }
