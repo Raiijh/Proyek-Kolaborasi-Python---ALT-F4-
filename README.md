@@ -11,16 +11,30 @@ Selamat datang di Proyek Kolaborasi Python ALT-F4. Repositori ini merupakan hasi
 
 ## Deskripsi Proyek
 
-Program ini adalah permainan klasik Tic Tac Toe (X dan 0) yang berbasis pyhton dengan antarmuka pengguna grafis (GUI) menggunakan Tkinter. Dirancang untuk dua pemain, aplikasi ini melacak skor antar ronde, mengelola logika permainan (giliran, menang,
- seri), dan menyediakan antarmuka yang bersih serta tombol reset yang mudah digunakan.
+Proyek ini adalah implementasi digital fungsional dari permainan klasik Tic-Tac-Toe (atau Noughts and Crosses). Program ini dibuat menggunakan bahasa Python dan menggunakan antarmuka pengguna grafis (GUI) standar Tkinter.
 
-## Requirements
+Program ini bertujuan untuk memberikan pengalaman bermain dua pemain yang lancar di mana pemain dapat mendaftarkan nama mereka sebelum permainan dimulai. Dua modul utama program adalah gui_app.py, yang berfungsi sebagai frontend dan menangani event klik, visualisasi, dan pembaruan tampilan. Tictactoe_logic.py berfungsi sebagai backend dan mengelola status papan, aturan kemenangan, dan skor. Pelacakan skor multi-ronde, tampilan garis kemenangan yang jelas, dan tombol reset yang efisien adalah fitur utamanya, yang menjamin pembagian masalah yang baik dalam arsitektur kode.
+
+## Panduan Instalasi
 - [Python](https://www.python.org/downloads/release/python-3140/)
+- [Git](https://github.com/git-for-windows/git/releases/download/v2.52.0.windows.1/Git-2.52.0-64-bit.exe)
+ > Jika belum terinstall, tekan "Python" atau "Git" di atas.
+
+ ### *Cloning repository*
+1. Salin link repositori ini: https://github.com/Raiijh/Proyek-Kolaborasi-Python---ALT-F4-.git
+2. Buka terminal dan pilih folder yang akan dijadikan tempat kloning repositori
+```bash
+  cd "[direktori folder yang ingin anda digunakan]"
+```
+3. Salin repositori program ke dalam folder menggunakan fungsi '**git clone**'
+```bash
+  git clone https://github.com/Raiijh/Proyek-Kolaborasi-Python---ALT-F4-.git
+```
 
 
 ## Cara Menajalankan Program
 
-1. Clone repo:
+1. Clone repository:
    ```bash
    git clone https://github.com/Raiijh/Proyek-Kolaborasi-Python---ALT-F4-.git
    ```
