@@ -4,9 +4,9 @@ Selamat datang di Proyek Kolaborasi Python ALT-F4. Repositori ini merupakan hasi
 
 ## Anggota Kolaborasi
 
-- **Rainer Jason Hamdani** ([Raiijh](https://github.com/Raiijh))
-- **Timothy Kylen Sulangi** ([mottkaiii](https://github.com/mottkaiii))
-- **Dennise Theo Sumenda** ([dennisesumenda-glitch](https://github.com/dennisesumenda-glitch))
+- *Rainer Jason Hamdani* ([Raiijh](https://github.com/Raiijh))
+- *Timothy Kylen Sulangi* ([mottkaiii](https://github.com/mottkaiii))
+- *Dennise Theo Sumenda* ([dennisesumenda-glitch](https://github.com/dennisesumenda-glitch))
 
 
 ## Deskripsi Proyek
@@ -22,41 +22,43 @@ Program ini bertujuan untuk memberikan pengalaman bermain dua pemain yang lancar
 |              | Logika Kemenangan              | Kombinasi Kunci: Daftar tuple berisi indeks kemenangan (misalnya, (0, 1, 2) untuk baris atas). Properti: self.menang_kombinasi = [(0, 1, 2), (3, 4, 5), ..., (0, 4, 8)] Metode: cek_menang() mengulang (loop) daftar ini.             
 |          | Aturan Validasi Gerakan                  | Pengecekan: Dijalankan di awal lakukan_gerakan(i). Fragmen Kode: if self.game_aktif and self.papan[i] == "": Ini memastikan gerakan hanya terjadi jika permainan aktif dan kotak kosong (mirip dengan mengecek kotak non-bom yang belum terbuka).                
 |           | Penggantian Giliran                  | Logika Sederhana: Tidak ada timer atau rule kompleks. Fragmen Kode: self.pemain_saat_ini = 'O' if pemain == 'X' else 'X' (dilakukan setelah gerakan valid dan belum ada pemenang).   
+| Integrasi  | Transfer Status Data                 | Method: get_status(). Mengemas semua data penting (skor, nama, giliran) dalam bentuk dictionary untuk dikonsumsi oleh GUI.          
+|              | Reset Backend              | Method: reset_game(). Hanya membersihkan self.papan dan mengatur ulang self.pemain_saat_ini = 'X'.             
 
 ## Panduan Instalasi
 - [Python](https://www.python.org/downloads/release/python-3140/)
 - [Git](https://github.com/git-for-windows/git/releases/download/v2.52.0.windows.1/Git-2.52.0-64-bit.exe)
  > Jika belum terinstall, tekan "Python" atau "Git" di atas.
 
- ### *Cloning repository*
+ ### Cloning repository
 1. Salin link repositori ini: https://github.com/Raiijh/Proyek-Kolaborasi-Python---ALT-F4-.git
 2. Buka terminal dan pilih folder yang akan dijadikan tempat kloning repositori
-```bash
+bash
   cd "[direktori folder yang ingin anda digunakan]"
-```
-3. Salin repositori program ke dalam folder menggunakan fungsi '**git clone**'
-```bash
+
+3. Salin repositori program ke dalam folder menggunakan fungsi '*git clone*'
+bash
   git clone https://github.com/Raiijh/Proyek-Kolaborasi-Python---ALT-F4-.git
-```
+
 
 
 ## Cara Menajalankan Program
 
 1. Clone repository:
-   ```bash
+   bash
    git clone https://github.com/Raiijh/Proyek-Kolaborasi-Python---ALT-F4-.git
-   ```
+   
 2. Masuk ke direktori:
-   ```bash
+   bash
    cd Proyek-Kolaborasi-Python---ALT-F4-
-   ```
+   
 3. jalankan permainan
-   ```bash
+   bash
    python gui_app.py
-   ```
+   
 
 ## Dokumentasi Teknis (Flowchart)
- ### *Flowchart Logika*
+ ### Flowchart Logika
 <img width="789" height="1175" alt="Untitled (1)" src="https://github.com/user-attachments/assets/2b8e228a-2247-404e-a586-c85201687712" />
 
  ### *Flowchart GUI*
