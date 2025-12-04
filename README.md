@@ -59,7 +59,6 @@ Program ini bertujuan untuk memberikan pengalaman bermain dua pemain yang lancar
  ### *Flowchart Logika*
 <img width="789" height="1175" alt="Untitled (1)" src="https://github.com/user-attachments/assets/2b8e228a-2247-404e-a586-c85201687712" />
 
-
-
-
+ ### *Flowchart GUI*
+<img width="3232" height="1403" alt="Untitled" src="https://github.com/user-attachments/assets/ce404843-3df4-40ce-a0a7-a8ac8112b13e" />
 
