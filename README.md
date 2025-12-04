@@ -46,3 +46,8 @@ Program ini bertujuan untuk memberikan pengalaman bermain dua pemain yang lancar
    ```bash
    python gui_app.py
    ```
+
+## Dokumentasi Teknis (Flowchart)
+ ### *Flowchart Logika*
+<img width="789" height="1175" alt="Untitled (1)" src="https://github.com/user-attachments/assets/6b474720-bd53-4f23-bb87-4826feb322bb" />
+
